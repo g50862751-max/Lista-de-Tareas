@@ -1,0 +1,106 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #013a67, #005c00);
+    padding: 1px;
+}
+.todo-app{
+    width: 100%;
+    max-width: 480px;
+    background: linear-gradient(135deg, #153667, #4e085f);
+    margin: 100px auto 20px;
+    padding: 40px 30px 60px;
+    border-radius: 10px;
+}
+.todo-app h2{
+   color: #fff;
+   display: flex;
+   align-items: center;
+   margin-bottom: 20px;
+}
+.todo-app h2 img{
+    width: 30px;
+    margin-left: 10px;
+}
+.add-task{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #edeef0;
+    border-radius: 5px;
+    padding-left: 10px;
+    margin-bottom: 25px;
+}
+input{
+   flex: 1;
+   border: 0;
+   outline: 0;
+   background: transparent;
+   padding: 10px;
+   font-size: 14px;
+}
+button{
+    border: 0;
+    padding: 16px 35px;
+    background: #ff9100;
+    color: #fff;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 0px 5px 5px 0;
+}
+ul li{
+    list-style: none;
+    font-size: 16px;
+    padding: 15px 8px 15px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+    background: #fff;
+    margin-bottom: 4px;
+    border-radius: 4px;
+}
+ul li::before{
+    content: "";
+    position: absolute;
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    background-image: url(todo-images/images/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 10px;
+}
+ul li span{
+    position: absolute;
+    right: 0;
+    top: 4px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+}
+ul li span:hover{
+    background: #ddd;
+}
+
+ul li.checked{
+    color: #555;
+    text-decoration: line-through;
+}
+ul li.checked::before{
+    background-image: url(todo-images/images/checked.png);
+}
+.message{
+    color: #fff;
+    text-align: center;
+}
